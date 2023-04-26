@@ -1,24 +1,11 @@
 .lia-quilt-column-side-content .lia-labels-list-sortable .lia-panel-heading-bar .dropdown-default-item .default-menu-option {
-    //changed color to black
-    color: #000000;
+    color: #1966FF;
     font-size: 20px;
     font-weight: bold;
     padding: 0;
-
-    //no pointer events, not clickable
-    cursor: default;
-    pointer-events: none;
-}
-
-//remove dropdown arrow
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-    appearance: none;
-    background-image: none;
 }
 
 .lia-quilt-column-side-content .lia-labels-list-sortable .lia-panel-heading-bar .dropdown-default-item .default-menu-option:after {
+    color: #1966FF;
     margin-left: 10px;
 }

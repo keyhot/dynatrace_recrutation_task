@@ -309,9 +309,10 @@
    text-align: center;
 }
 
+/* Changed the division form 4 to 5, because new element added to the carousel */
 #testimonials-carousel > .carousel-indicators > li {
     display: inline-block;
-    width: calc(100% / 4 - 50px);
+    width: calc(100% / 5 - 50px);
     height: 0.6rem;
     margin: 20px;
     text-indent: -999px;
@@ -323,7 +324,7 @@
 
 #testimonials-carousel .carousel-indicators .active {
     display: inline-block;
-    width: calc(100% / 4 - 50px);
+    width: calc(100% / 5 - 50px);
     height: 0.6rem;
     margin: 20px;
     text-indent: -999px;
@@ -678,8 +679,15 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
     opacity: 1;
 }
 
-
-
+/* Benefits section for 900px screen size and below */
+@media screen and (max-width: 900px) {
+    body {
+        background-color: black;
+    }
+    .benefits-content-list-element {
+        width: calc(100% / 3);
+    }
+}
 
 </style>
 
@@ -810,7 +818,7 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
     </div>
     <div class="map-content-image">
-      <img src="https://community.dynatrace.com/html/assets/map with faces.jpg"></img>
+      <img src="https://community.dynatrace.com/html/assets/map with faces.jpg">
     </div>
     <div class="map-content-text">
       <div class="map-content-text-1">
@@ -826,6 +834,9 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
   </div>
 </div>
 
+<!-- Create a div where a button will be located -->
+<div class="map-button-wrapper"></div>
+
 <div class="testimonials-wrapper">
   <div class="testimonials-content">
    <div class="testimonials-title">
@@ -840,6 +851,8 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
     <li data-target="#testimonials-carousel" data-slide-to="1"></li>
     <li data-target="#testimonials-carousel" data-slide-to="2"></li>
     <li data-target="#testimonials-carousel" data-slide-to="3"></li>
+    <!-- Added new indicator -->
+    <li data-target="#testimonials-carousel" data-slide-to="4"></li>
   </ol>
 
   <div class="carousel-inner">
@@ -854,7 +867,7 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
         <div class="testimonials-picture">
           <div class="testimonials-picture-avatar">
-            <img src="https://community.dynatrace.com/html/assets/Chad - picure.jpg"></img>
+            <img src="https://community.dynatrace.com/html/assets/Chad - picure.jpg">
           </div>
           <div class="testimonials-picture-name">
             <h2>Chad Turner</h2>
@@ -875,7 +888,7 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
         <div class="testimonials-picture">
           <div class="testimonials-picture-avatar">
-            <img src="https://dt-cdn.net/images/cmom-rpanel-200-8e22f78517.jpg"></img>
+            <img src="https://dt-cdn.net/images/cmom-rpanel-200-8e22f78517.jpg">
           </div>
           <div class="testimonials-picture-name">
             <h2>Gil Givati</h2>
@@ -896,7 +909,7 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
         <div class="testimonials-picture">
           <div class="testimonials-picture-avatar">
-            <img src="https://dt-cdn.net/images/cmom-nov-200-4a485e9d10.png"></img>
+            <img src="https://dt-cdn.net/images/cmom-nov-200-4a485e9d10.png">
           </div>
           <div class="testimonials-picture-name">
             <h2>Rastislav Danis</h2>
@@ -917,11 +930,33 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
         <div class="testimonials-picture">
           <div class="testimonials-picture-avatar">
-            <img src="https://dt-cdn.net/images/cmom-square-200-ef30e9c11c.png"></img>
+            <img src="https://dt-cdn.net/images/cmom-square-200-ef30e9c11c.png">
           </div>
           <div class="testimonials-picture-name">
             <h2>Latarasa Abdelmalek</h2>
             <p>Monitoring and Performance Consultant</p>
+          </div>
+        </div>
+     </div>
+    </div>
+
+    <!-- New item with random person, and Lorem Inpsum text -->
+    <div class="item">
+     <div class="testimonials-quote-wrap">
+      <div class="testimonials-quote-element">
+        <div class="testimonials-quote">
+          <p>The Dynatrace Community is lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <img class="testimonial-quote-mark-1" src="https://community.dynatrace.com/html/assets/quote_black.png">
+          <img class="testimonial-quote-mark-2" src="https://community.dynatrace.com/html/assets/quote_black.png">
+        </div>
+      </div>
+        <div class="testimonials-picture">
+          <div class="testimonials-picture-avatar">
+            <img src="https://www.usmagazine.com/wp-content/uploads/2022/06/Johnny-Depp-Through-Years-From-Teen-Idol-Oscar-Nominee-002.jpg?w=1200&quality=84&strip=all">
+          </div>
+          <div class="testimonials-picture-name">
+            <h2>John Depp</h2>
+            <p>Software Developer Intern</p>
           </div>
         </div>
      </div>
@@ -965,7 +1000,7 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
       </div>
       <div class="join-dynamights-content-icon">
         <div class="join-dynamights-content-picture">
-          <img src="https://community.dynatrace.com/html/assets/DynaMights_logo.png"></img>
+          <img src="https://community.dynatrace.com/html/assets/DynaMights_logo.png">
         </div>
         <div class="join-dynamights-content-button">
           <a class="lia-button-link-new lia-button-link-new-blue" href="https://community.dynatrace.com/t5/DynaMights/ct-p/DynaMights" style="font-size: 20px;">Explore the program<span class="lia-button-link-arrow lia-button-link-arrow-blue"></span></a>
@@ -1035,5 +1070,38 @@ span.lia-button-link-arrow.lia-button-link-arrow-black {
   </div>
 </div>
 
+<script>
+    //Create a div element
+    const wrapper = document.createElement("div");
+
+    //Change the style properties of div element
+    wrapper.style.width = "80%";
+    wrapper.style.height = "100px";
+    wrapper.style.margin = "10px auto";
+    wrapper.style.boxShadow = "0px 4px 10px rgba(2, 9, 27, 0.15)";
+    wrapper.style.borderRadius = "8px";
+    wrapper.style.display = "flex";
+    wrapper.style.alignItems = "center";
+    wrapper.style.justifyContent = "center";
+
+    //Create a button
+    const button = document.createElement("a");
+
+    //Change the properties of a button
+    button.innerHTML = "Open Google Maps";
+    button.href = "https://www.google.com/maps/";
+    button.classList.add("lia-button");
+    button.style.textAlign = "center";
+    button.style.color = "white";
+    button.style.border = "2px solid #9900cc";
+    button.style.background = "#9900cc";
+
+    //Relocate button inside a wrapper
+    wrapper.appendChild(button);
+
+    //Place wrapper into the selected div
+    const dest = document.querySelector(".map-button-wrapper");
+    dest.appendChild(wrapper);
+</script>
 </body>
 </html>
